@@ -1,0 +1,3 @@
+# Interview Assistant
+
+A real-time interview assistance platform that provides live transcription and AI-powered response suggestions for job interviews...
