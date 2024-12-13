@@ -1,0 +1,22 @@
+# Default configuration
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  chunk_size: 1024
+
+whisper:
+  model: whisper-1
+  language: en
+  response_format: json
+
+gpt:
+  model: gpt-4o
+  temperature: 0.7
+  max_tokens: 150
+
+ui:
+  opacity: 0.8
+  font_size: 12
+  width: 800
+  height: 600
