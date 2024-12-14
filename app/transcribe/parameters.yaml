@@ -1,0 +1,51 @@
+OpenAI:
+  api_key: 'API_KEY'
+  base_url: 'https://api.openai.com/v1'
+  ai_model: gpt-4o-mini
+  local_transcripton_model_file: 'base'
+  response_request_timeout_seconds: 10
+  summarize_request_timeout_seconds: 30
+  temperature: 0.0
+
+Deepgram:
+  api_key: 'API_KEY'
+
+Together:
+  api_key: 'API_KEY'
+  ai_model: 'mistralai/Mixtral-8x7B-Instruct-v0.1'
+  base_url: 'https://api.together.xyz'
+
+WhisperCpp:
+  local_transcripton_model_file: 'base'
+
+General:
+  log_file: 'logs/Transcribe.log'
+  save_llm_response_to_file: Yes
+  llm_response_file: 'logs/response.txt'
+  transcript_audio_duration_seconds: 3
+  clear_transcript_periodically: No
+  clear_transcript_interval_seconds: 90
+  use_api: False
+  mic_device_index: -1
+  speaker_device_index: -1
+  disable_mic: False
+  disable_speaker: False
+  stt: whisper
+  continuous_response: True
+  llm_response_interval: 10
+  chat_inference_provider: openai
+
+  default_prompt_preamble: "You are a experienced interview coach, helping prepare for behavioral interviews. A transcription of the conversation is given below. "
+  default_prompt_epilogue: "Please provide constructive feedback on the interview responses, focusing on structure, clarity, and effectiveness. Give specific suggestions for improvement. Provide your response in square brackets."
+  
+  system_prompt: "You are an experienced interview coach specializing in behavioral interviews. Provide detailed, constructive feedback focusing on STAR method implementation, clarity, and effectiveness. Frame responses within square brackets. Focus on practical improvements while maintaining confidence."
+
+  summary_prompt: 'Create a concise summary of the interview responses, highlighting key strengths and areas for improvement'
+
+  initial_convo:
+    first:
+      role: "You"
+      content: "I'm preparing for behavioral interviews and would like feedback on my responses."
+    second:
+      role: "assistant"
+      content: "I'm here to help you prepare for your behavioral interviews. Let's work on crafting strong, structured responses using the STAR method."
